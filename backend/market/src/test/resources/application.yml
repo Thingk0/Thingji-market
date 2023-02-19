@@ -1,0 +1,24 @@
+
+# 테스트용 h2 인-메모리 설정
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
+
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+
+
+# 로그 레벨 설정
+logging:
+  level:
+    org.hibernate.SQL: debug
+#    org.hibernate.type: trace
