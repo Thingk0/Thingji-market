@@ -2,7 +2,7 @@
 # 프로필 설정
 spring:
   profiles:
-    active: prod
+    active: dev
 
   jpa:
     open-in-view: true
@@ -15,4 +15,4 @@ spring:
 logging:
   level:
     org.hibernate.SQL: debug
-#    org.hibernate.type: trace
+#    org.hibernate.type: trace\

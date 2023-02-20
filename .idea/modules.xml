@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Thingji-market.iml" filepath="$PROJECT_DIR$/.idea/Thingji-market.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.thingji.market.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.thingji.market.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/market.main.iml" filepath="$PROJECT_DIR$/.idea/modules/market.main.iml" />
     </modules>
   </component>
