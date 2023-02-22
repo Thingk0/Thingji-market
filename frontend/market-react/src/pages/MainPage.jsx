@@ -3,10 +3,9 @@ import styled from "styled-components";
 import PostList from "../components/PostList";
 import Button from "../ui/Button";
 import {useNavigate} from "react-router-dom";
-
+import PostListItemData from "../PostListItemData.json"
 
 const Wrapper = styled.div`
-  height: 800px;
   padding: 16px;
   width: calc(100% - 32px);
   border: solid 1px black;
@@ -15,7 +14,6 @@ const Wrapper = styled.div`
 const Container = styled.div`
   width: 100%;
   border: solid 1px #000000;
-  height: 600px;
 `;
 
 const MainTitleText = styled.p`
@@ -29,6 +27,7 @@ const ListContainer = styled.div`
   border-radius: 8px;
 `;
 
+console.log(PostListItemData);
 
 function MainPage(props) {
 
@@ -37,12 +36,24 @@ function MainPage(props) {
 
     return (
         <Wrapper>
-            <MainTitleText>띵지마켓</MainTitleText>
+            <MainTitleText>띵지마켓
+                <Button title="🔍" bg_color="lightblue"/>
+                <Button title="메뉴" bg_color="lightblue"/>
+            </MainTitleText>
+
             <Container>
                 <Button title="자연캠" bg_color="#B6C0FFFF"/>
                 <Button title="인문캠" bg_color="#B6C0FFFF"/>
 
-                <ListContainer><PostList/></ListContainer>
+                <ListContainer>
+                    <PostList
+                        posts={PostListItemData}
+                        onClickItem={(item) => {
+                            navigate(`/post/${item.id}`);
+                            console.log(item.id)
+                        }}
+                    />
+                </ListContainer>
 
                 <Button
                     onClick={() => {
