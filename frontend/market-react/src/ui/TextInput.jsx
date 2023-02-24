@@ -6,9 +6,5 @@ const TextInput = () => {
         <textarea />
 
     );
-
-
-
-
 }
 export default TextInput;

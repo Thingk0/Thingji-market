@@ -4,7 +4,9 @@ import styled from "styled-components";
 
 const MDiv = styled.div`
   margin: 30px;
+  padding: 10px 20px;
   border: solid 1px black;
+  border-radius: 8px;
   cursor: pointer;
   :hover {
     background: lightgray;
@@ -35,12 +37,10 @@ const PostListItem = (props) => {
                     <ItemStatus color={itemColor}>{itemStatus}</ItemStatus>
                 </div>
                 <div>{campus} {post.location}</div>
-                <div>{post.price}</div>
+                <b>{post.price}원</b>
                 <div>❤️{post.like}</div>
             </MDiv>
         </>
-
-
     );
 }
 
