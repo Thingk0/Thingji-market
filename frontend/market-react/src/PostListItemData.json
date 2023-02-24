@@ -12,7 +12,7 @@
     "id": 2,
     "itemName": "맥북",
     "price": "200000",
-    "like": "5",
+    "like": "7",
     "itemStatus": "SOLD_OUT",
     "campus": "SEOUL",
     "location": "정문 앞"
@@ -52,7 +52,7 @@
     "id": 6,
     "itemName": "커피",
     "price": "320000",
-    "like": "66",
+    "like": "6",
     "itemStatus": "SOLD_OUT",
     "campus": "YONGIN",
     "location": "남동"
