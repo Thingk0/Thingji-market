@@ -17,7 +17,7 @@ const ImgDiv = styled.div`
   text-align: center;
 `;
 
-const PostContent = styled.div`
+const PostContent = styled.p`
   width: calc(100% - 32px);
   padding: 16px;
   display: flex;
@@ -26,9 +26,23 @@ const PostContent = styled.div`
 `;
 
 const Heart = styled.p`
-  margin-left: 90%;
-  font-size: 20px;
+  margin-left: 87%;
+  font-size: 25px;
 `;
+
+const StatusContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+const ItemStatus = styled.div`
+  margin: 0 8px;
+  font-weight: bold;
+  ${(props) =>
+    props.color &&
+    `color: ${props.color};
+      `}
+`
 
 const PostViewPage = () => {
 
@@ -43,6 +57,7 @@ const PostViewPage = () => {
 
     const campus = post.campus === "YONGIN" ? "용인캠" : "서울캠";
     const itemStatus = post.itemStatus === "SALE" ? "판매중" : "판매 완료";
+    const itemColor = itemStatus === "판매중" ? "green" : "tomato";
 
     return (
         <>
@@ -62,9 +77,14 @@ const PostViewPage = () => {
 
             <h2>{post.itemName}</h2>
             <b>가격: {post.price}</b>
-            <p>위치: {post.location}</p>
-            <p>캠퍼스: {campus}</p>
-            <p>판매 상태: {itemStatus}</p>
+            <p>위치: {campus}퍼스 {post.location}</p>
+
+            <StatusContainer>
+                <div>판매 상태:</div>
+                <ItemStatus color={itemColor}>{itemStatus}</ItemStatus>
+            </StatusContainer>
+
+
             <hr />
             <PostContent>글 내용 : {post.content}</PostContent>
             <hr />

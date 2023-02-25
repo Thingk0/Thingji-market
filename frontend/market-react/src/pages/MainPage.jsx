@@ -22,13 +22,17 @@ const Container = styled.div`
   border: solid 1px #000000;
 `;
 const MainTitleText = styled.p`
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 55px;
+  font-weight: 900;
   margin: 0;
   display: inline-block;
+  background: linear-gradient(to right, #6198e5 0%, #f6a09e 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
+
 const ListContainer = styled.div`
-  margin: 10px 20px;
+  margin: 0 20px;
   border: 1px solid #000000;
   border-radius: 8px;
 `;
@@ -40,7 +44,6 @@ const ButtonContainer = styled.div`
 const TopBtnContainer = styled.div`
   display: inline-block;
 `
-
 
 
 console.log(PostListItemData);
@@ -55,8 +58,8 @@ function MainPage(props) {
             <Header>
                 <MainTitleText>띵지마켓</MainTitleText>
                 <TopBtnContainer>
-                    <Button title="🔍" bg_color="lightblue" topBtn/>
-                    <Button title="☰" bg_color="lightblue" topBtn/>
+                    <Button title="🔍" bg_color="#B6C0FFFF" topBtn/>
+                    <Button title="☰" bg_color="#B6C0FFFF" topBtn/>
                 </TopBtnContainer>
             </Header>
 
