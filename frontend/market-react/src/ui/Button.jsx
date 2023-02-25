@@ -24,7 +24,10 @@ function Button(props) {
     return (
         <StyledButton
             onClick={onClick}
-            bg_color={bg_color}>{title}</StyledButton>
+            bg_color={bg_color}
+        >
+            {title}
+        </StyledButton>
     );
 }
 

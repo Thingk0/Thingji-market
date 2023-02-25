@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "itemName": "아이패드 프로11",
+    "price": "1000000",
+    "like": "35",
+    "itemStatus": "SALE",
+    "campus": "YONGIN",
+    "location": "남동"
+    },
+  {
+    "id": 2,
+    "itemName": "맥북",
+    "price": "200000",
+    "like": "7",
+    "itemStatus": "SOLD_OUT",
+    "campus": "SEOUL",
+    "location": "정문 앞"
+
+  },
+  {
+    "id": 3,
+    "itemName": "브라우니",
+    "price": "23000",
+    "like": "3",
+    "itemStatus": "SOLD_OUT",
+    "campus": "YONGIN",
+    "location": "광장"
+
+  },
+  {
+    "id": 4,
+    "itemName": "사과",
+    "price": "40000",
+    "like": "22",
+    "itemStatus": "SALE",
+    "campus": "YONGIN",
+    "location": "채플관 앞"
+
+  },
+  {
+    "id": 5,
+    "itemName": "딸기",
+    "price": "66000",
+    "like": "45",
+    "itemStatus": "SALE",
+    "campus": "SEOUL",
+    "location": "운동장"
+
+  },
+  {
+    "id": 6,
+    "itemName": "커피",
+    "price": "320000",
+    "like": "6",
+    "itemStatus": "SOLD_OUT",
+    "campus": "YONGIN",
+    "location": "남동"
+  }
+]

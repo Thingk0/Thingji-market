@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../ui/Button";
 import {useNavigate} from "react-router-dom";
-
+import TextInput from "../ui/TextInput";
 const PostWritePage = () => {
 
     const navigate = useNavigate();
@@ -16,7 +16,8 @@ const PostWritePage = () => {
                     bg_color="#B39EFFFF"
             />
 
-            <h1>Post Write Page</h1>
+            <h1>Post Write Page - 글쓰기</h1>
+            <TextInput />
         </>
     );
 }
