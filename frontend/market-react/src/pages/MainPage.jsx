@@ -11,7 +11,6 @@ const Header = styled.div`
   justify-content: space-between;
   align-items: center;
 `
-
 const Wrapper = styled.div`
   padding: 16px;
   width: calc(100% - 32px);
@@ -30,13 +29,12 @@ const MainTitleText = styled.p`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
-
 const ListContainer = styled.div`
   margin: 0 20px;
   border: 1px solid #000000;
   border-radius: 8px;
 `;
-const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -63,13 +61,11 @@ function MainPage(props) {
                 </TopBtnContainer>
             </Header>
 
-
             <Container>
                 <ButtonContainer>
                     <Button title="자연캠" bg_color="#B6C0FFFF"/>
                     <Button title="인문캠" bg_color="#B6C0FFFF"/>
                 </ButtonContainer>
-
 
                 <ListContainer>
                     <PostList
@@ -92,8 +88,6 @@ function MainPage(props) {
                         글쓰기
                     </Button>
                 </ButtonContainer>
-
-
             </Container>
         </Wrapper>
     );

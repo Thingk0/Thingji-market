@@ -28,7 +28,6 @@ export const StyledButton = styled.button`
       padding: 0;
       `
   }
-
 `;
 
 

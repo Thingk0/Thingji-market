@@ -16,7 +16,6 @@ const ImgDiv = styled.div`
   border-radius: 8px;
   text-align: center;
 `;
-
 const PostContent = styled.p`
   width: calc(100% - 32px);
   padding: 16px;
@@ -24,17 +23,14 @@ const PostContent = styled.p`
   border: 1px solid grey;
   border-radius: 8px;
 `;
-
 const Heart = styled.p`
   margin-left: 87%;
   font-size: 25px;
 `;
-
 const StatusContainer = styled.div`
   display: flex;
   flex-direction: row;
 `
-
 const ItemStatus = styled.div`
   margin: 0 8px;
   font-weight: bold;
@@ -43,9 +39,7 @@ const ItemStatus = styled.div`
     `color: ${props.color};
       `}
 `
-
 const PostViewPage = () => {
-
     const { postId } = useParams();
     const navigate = useNavigate();
 
@@ -59,6 +53,7 @@ const PostViewPage = () => {
     const itemStatus = post.itemStatus === "SALE" ? "판매중" : "판매 완료";
     const itemColor = itemStatus === "판매중" ? "green" : "tomato";
 
+
     return (
         <>
             <Button
@@ -68,10 +63,6 @@ const PostViewPage = () => {
                 }}
                 bg_color="#B39EFFFF"
             />
-            <h1>Post View Page - 상세페이지</h1>
-            <h2>글 id : {postId}</h2>
-            <hr />
-
             <ImgDiv>사진</ImgDiv>
             <Heart>❤️{post.like}</Heart>
 
@@ -84,7 +75,6 @@ const PostViewPage = () => {
                 <ItemStatus color={itemColor}>{itemStatus}</ItemStatus>
             </StatusContainer>
 
-
             <hr />
             <PostContent>글 내용 : {post.content}</PostContent>
             <hr />
@@ -95,8 +85,5 @@ const PostViewPage = () => {
     );
 }
 
+
 export default PostViewPage;
-
-
-
-
