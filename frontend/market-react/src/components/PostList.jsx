@@ -1,19 +1,30 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import PostListItem from "./PostListItem";
 
 
-//todo PostListItem map 함수로 뿌리기
+// todo 버튼 ON/OFF 기능 - V
 
 const PostList = (props) => {
 
-    const { posts, onClickItem } = props;
+
+    const {posts, onClickItem, stateY, stateS} = props;
+
+
+    if (stateY) {
+        const filterdCampus = posts.filter((post) => post.campus.includes("YONGIN"));
+        console.log(filterdCampus)
+    }
+    if (stateS) {
+        const filterdCampus = posts.filter((post) => post.campus.includes("SEOUL"));
+        console.log(filterdCampus)
+    }
 
 
     return (
         <div>
             {posts.map((post, index) => {
-                return(
+                return (
                     <PostListItem
                         key={post.id}
                         post={post}

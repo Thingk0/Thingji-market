@@ -28,12 +28,18 @@ export const StyledButton = styled.button`
       padding: 0;
       `
   }
+  ${(props) =>
+      (props.state) && css
+      `
+        background-color: #ada7a7;
+      `
+  }
 `;
 
 
 function Button(props) {
 
-    const {title, onClick, bg_color, size, topBtn} = props;
+    const {title, onClick, bg_color, size, topBtn, state} = props;
 
 
     return (
@@ -42,6 +48,7 @@ function Button(props) {
             bg_color={bg_color}
             size={size}
             topBtn={topBtn}
+            state={state}
         >
             {title}
         </StyledButton>

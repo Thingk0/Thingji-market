@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import PostList from "../components/PostList";
 import Button from "../ui/Button";
@@ -50,6 +50,17 @@ function MainPage(props) {
 
     const navigate = useNavigate();
 
+    const [isClickedY, setIsClickedY] = useState(false);
+    const [isClickedS, setIsClickedS] = useState(false);
+
+
+    const FilterYBtnState = () => {
+        setIsClickedY(!isClickedY);
+    }
+    const FilterSBtnState = () => {
+        setIsClickedS(!isClickedS);
+    }
+
 
     return (
         <Wrapper>
@@ -63,8 +74,8 @@ function MainPage(props) {
 
             <Container>
                 <ButtonContainer>
-                    <Button title="자연캠" bg_color="#B6C0FFFF"/>
-                    <Button title="인문캠" bg_color="#B6C0FFFF"/>
+                    <Button title="자연캠" bg_color="#B6C0FFFF" onClick={FilterYBtnState} state={isClickedY}/>
+                    <Button title="인문캠" bg_color="#B6C0FFFF" onClick={FilterSBtnState} state={isClickedS}/>
                 </ButtonContainer>
 
                 <ListContainer>
@@ -74,6 +85,8 @@ function MainPage(props) {
                             navigate(`/post/${item.id}`);
                             console.log(item.id)
                         }}
+                        stateY={isClickedY}
+                        stateS={isClickedS}
                     />
                 </ListContainer>
 
