@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import PostList from "../components/PostList";
 import Button from "../ui/Button";
@@ -53,13 +53,24 @@ function MainPage(props) {
     const [isClickedY, setIsClickedY] = useState(false);
     const [isClickedS, setIsClickedS] = useState(false);
 
+    // useEffect(() => {
+    //     setIsClickedY(!isClickedY);
+    // }, []);
+    //
+    // useEffect(() => {
+    //     setIsClickedS(!isClickedS);
+    // }, []);
+    // console.log(isClickedY)
+    // console.log(isClickedS)
 
-    const FilterYBtnState = () => {
-        setIsClickedY(!isClickedY);
-    }
-    const FilterSBtnState = () => {
-        setIsClickedS(!isClickedS);
-    }
+    // const FilterYBtnState = () => {
+    //     setIsClickedY(!isClickedY);
+    // }
+    // const FilterSBtnState = () => {
+    //     setIsClickedS(!isClickedS);
+    // }
+
+    // state={isClickedY}
 
 
     return (
@@ -74,8 +85,8 @@ function MainPage(props) {
 
             <Container>
                 <ButtonContainer>
-                    <Button title="자연캠" bg_color="#B6C0FFFF" onClick={FilterYBtnState} state={isClickedY}/>
-                    <Button title="인문캠" bg_color="#B6C0FFFF" onClick={FilterSBtnState} state={isClickedS}/>
+                    <Button title="자연캠" bg_color="#B6C0FFFF" onClick={() => setIsClickedY(!isClickedY)} state={isClickedY}/>
+                    <Button title="인문캠" bg_color="#B6C0FFFF" onClick={() => setIsClickedS(!isClickedS)} state={isClickedS}/>
                 </ButtonContainer>
 
                 <ListContainer>

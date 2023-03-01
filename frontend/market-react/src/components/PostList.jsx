@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import PostListItem from "./PostListItem";
 
@@ -10,20 +10,42 @@ const PostList = (props) => {
 
     const {posts, onClickItem, stateY, stateS} = props;
 
+    const [filteredYPosts, setFilteredYPosts] = useState("")
+    const [filteredSPosts, setFilteredSPosts] = useState("")
 
-    if (stateY) {
-        const filterdCampus = posts.filter((post) => post.campus.includes("YONGIN"));
-        console.log(filterdCampus)
-    }
-    if (stateS) {
-        const filterdCampus = posts.filter((post) => post.campus.includes("SEOUL"));
-        console.log(filterdCampus)
-    }
+
+    const [filteredArr, setFilteredArr] = useState(posts)
+
+
+    useEffect(() => {
+        if(stateY){
+            const filterdYCampus = posts.filter((post) => post.campus.includes("YONGIN"));
+            setFilteredArr(filterdYCampus)
+            console.log(filteredArr)
+
+        } else {
+            console.log("자연캠: false"); //todo false면 지우고
+        }
+    }, [stateY])
+
+    useEffect(() => {
+        if(stateS){
+            const filterdSCampus = posts.filter((post) => post.campus.includes("SEOUL"));
+            setFilteredArr(filterdSCampus)
+
+            console.log(filteredArr)
+
+
+        } else {
+
+            console.log("인문캠: false"); //todo false면 지우고
+        }
+    }, [stateS])
 
 
     return (
         <div>
-            {posts.map((post, index) => {
+            {filteredArr.map((post, index) => {
                 return (
                     <PostListItem
                         key={post.id}
