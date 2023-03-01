@@ -3,16 +3,8 @@ import styled from "styled-components";
 import PostListItem from "./PostListItem";
 
 
-// todo 버튼 ON/OFF 기능 - V
-
 const PostList = (props) => {
-
-
     const {posts, onClickItem, stateY, stateS} = props;
-
-    const [filteredYPosts, setFilteredYPosts] = useState("")
-    const [filteredSPosts, setFilteredSPosts] = useState("")
-
 
     const [filteredArr, setFilteredArr] = useState(posts)
 
@@ -22,9 +14,8 @@ const PostList = (props) => {
             const filterdYCampus = posts.filter((post) => post.campus.includes("YONGIN"));
             setFilteredArr(filterdYCampus)
             console.log(filteredArr)
-
         } else {
-            console.log("자연캠: false"); //todo false면 지우고
+            console.log("자연캠: false"); //todo false면 배열에서 지우기
         }
     }, [stateY])
 
@@ -32,13 +23,9 @@ const PostList = (props) => {
         if(stateS){
             const filterdSCampus = posts.filter((post) => post.campus.includes("SEOUL"));
             setFilteredArr(filterdSCampus)
-
             console.log(filteredArr)
-
-
         } else {
-
-            console.log("인문캠: false"); //todo false면 지우고
+            console.log("인문캠: false"); //todo false면 배열에서 지우기
         }
     }, [stateS])
 
